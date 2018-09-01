@@ -1,0 +1,27 @@
+<!--
+  Generated template for the LoginWithEmailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>이메일로 시작하기</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label floating>이메일</ion-label>
+    <ion-input type="email" [(ngModel)]='email'></ion-input>
+  </ion-item>
+
+  <ion-item no-lines>
+    <button ion-button col-12 (click)='emailLogin($event)'>시작!</button>
+  </ion-item>
+
+</ion-content>
