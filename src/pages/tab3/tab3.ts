@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { LoginPage } from '../login/login';
+import { AngularFireAuth } from 'angularfire2/auth';
+import { Observable } from 'rxjs';
 
 /**
  * Generated class for the Tab3Page page.
@@ -16,7 +18,14 @@ import { LoginPage } from '../login/login';
 })
 export class Tab3Page {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  user: Observable<firebase.User>
+
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    private afAuth: AngularFireAuth) {
+    this.user = this.afAuth.authState
+    this.user.subscribe(console.log)
   }
 
   ionViewDidLoad() {
@@ -26,6 +35,11 @@ export class Tab3Page {
   openLoginPage() {
     console.log('openLoginPage')
     this.navCtrl.push(LoginPage)
+  }
+
+  signOut() {
+    console.log('try to sign out')
+    this.afAuth.auth.signOut()
   }
 
 }

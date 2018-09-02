@@ -5,23 +5,46 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
+  <ion-toolbar>
     <ion-title>내 정보</ion-title>
-  </ion-navbar>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="signOut()">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+
 </ion-header>
 
 
 <ion-content>
-  <ion-card>
-    <ion-row>
-      <ion-col col-4 text-center>
-        <ion-icon name="logo-octocat" color="primary"></ion-icon>
-      </ion-col>
-      <button ion-item col-8 (click)="openLoginPage()">
-        로그인 하기
-      </button>
-    </ion-row>
-  </ion-card>
+  <div *ngIf="(user | async) as user; else auth">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-2>
+          <img src="{{user.photoURL}}" />
+        </ion-col>
+        <ion-col col-10>
+          {{user.displayName}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
 
+  </div>
+
+  <ng-template #auth>
+    <div>
+      <img src="../../assets/imgs/title.png" />
+      <ion-card>
+        <ion-row>
+          <ion-col col-4 text-center>
+            <ion-icon name="logo-octocat" color="primary"></ion-icon>
+          </ion-col>
+          <button ion-item col-8 (click)="openLoginPage()">
+            로그인 하기
+          </button>
+        </ion-row>
+      </ion-card>
+    </div>
+  </ng-template>
 </ion-content>
