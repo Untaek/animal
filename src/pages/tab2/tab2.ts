@@ -24,7 +24,9 @@ export class Tab2Page {
   
   data: ISimpleAnimal[] = [
     { petID: '155aa', isUpdated: true, photoURL: 'https://googlephoto.com/155aa', likes: 500 },
-    {petID: '43erf'}
+    { petID: '43erf', isUpdated: false, photoURL: 'https://', likes: 60 },
+    { petID: '25afe', isUpdated: true, photoURL: 'http://', likes: 100 },
+    { petID: '87abb', isUpdated: true, photoURL: 'http://', likes: 20055}
   ]
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
