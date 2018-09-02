@@ -6,7 +6,6 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import firebase from 'firebase'
 import { GooglePlus } from '@ionic-native/google-plus';
 import { AngularFirestore } from 'angularfire2/firestore';
-import { IUser } from '../../util/IUser';
 import { AuthManager } from '../../util/auth';
 /**
  * Generated class for the LoginPage page.
