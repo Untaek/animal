@@ -29,22 +29,25 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-
   </div>
 
   <ng-template #auth>
     <div>
       <img src="../../assets/imgs/title.png" />
-      <ion-card>
-        <ion-row>
-          <ion-col col-4 text-center>
-            <ion-icon name="logo-octocat" color="primary"></ion-icon>
-          </ion-col>
-          <button ion-item col-8 (click)="openLoginPage()">
-            로그인 하기
-          </button>
-        </ion-row>
-      </ion-card>
+      <ion-list>
+        <ion-item>
+          <ion-icon name='mail' item-start></ion-icon>
+          <button ion-button full (click)='openLoginPage("email")'>이메일로 시작하기</button>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='logo-google' item-start></ion-icon>
+          <button ion-button full (click)='openLoginPage("google")'>구글 계정으로 시작하기</button>
+        </ion-item>
+        <ion-item>
+          <ion-icon name='logo-facebook' item-start></ion-icon>
+          <button ion-button full (click)='openLoginPage("facebook")'>페이스북 계정으로 시작하기</button>
+        </ion-item>
+      </ion-list>
     </div>
   </ng-template>
 </ion-content>

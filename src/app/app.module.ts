@@ -13,6 +13,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { LoginWithPhonePage } from '../pages/login-with-phone/login-with-phone';
 import { GooglePlus } from '@ionic-native/google-plus'
 import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
+import { Facebook } from '@ionic-native/facebook'
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAsdcU4x5Few8dI8HFHEZbm_C_c4zRD5qQ',
@@ -55,6 +56,7 @@ const firebaseConfig = {
     SplashScreen,
     AngularFireDatabase,
     AngularFirestore,
+    Facebook,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ],
 })

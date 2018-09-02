@@ -86,5 +86,14 @@
         <variable name="REVERSED_CLIENT_ID" value="com.googleusercontent.apps.877795668080-bsa0tebepnkd3smk1bh8ei30s3ssott4" />
         <variable name="WEB_APPLICATION_CLIENT_ID" value="877795668080-bsa0tebepnkd3smk1bh8ei30s3ssott4.apps.googleusercontent.com" />
     </plugin>
-    <engine name="android" spec="^7.0.0" />
+    <plugin name="cordova-plugin-facebook4" spec="^2.3.0">
+        <variable name="APP_ID" value="703427763358555" />
+        <variable name="APP_NAME" value="animal" />
+        <variable name="ANDROID_SDK_VERSION" value="4.+" />
+    </plugin>
+    <config-file parent="/*" target="app/src/main/res/values/strings.xml">
+        <string name="fb_app_id">703427763358555</string>
+        <string name="fb_app_name">animal</string>
+    </config-file>
+    <engine name="android" spec="6.4.0" />
 </widget>

@@ -21,17 +21,19 @@
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
     "@ionic-native/core": "~4.12.2",
+    "@ionic-native/facebook": "^4.12.2",
     "@ionic-native/firebase": "^4.12.2",
     "@ionic-native/google-plus": "^4.12.2",
     "@ionic-native/splash-screen": "~4.12.2",
     "@ionic-native/status-bar": "~4.12.2",
     "@ionic/storage": "2.1.3",
     "angularfire2": "^5.0.0-rc.11",
-    "cordova-android": "^7.0.0",
+    "cordova-android": "6.4.0",
     "cordova-plugin-browsertab": "^0.2.0",
     "cordova-plugin-buildinfo": "^2.0.2",
     "cordova-plugin-compat": "^1.2.0",
     "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-facebook4": "^2.3.0",
     "cordova-plugin-googleplus": "^5.3.0",
     "cordova-plugin-inappbrowser": "^3.0.0",
     "cordova-plugin-ionic-keyboard": "^2.1.2",
@@ -64,7 +66,12 @@
         "REVERSED_CLIENT_ID": "com.googleusercontent.apps.877795668080-bsa0tebepnkd3smk1bh8ei30s3ssott4",
         "WEB_APPLICATION_CLIENT_ID": "877795668080-bsa0tebepnkd3smk1bh8ei30s3ssott4.apps.googleusercontent.com"
       },
-      "cordova-plugin-statusbar": {}
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "703427763358555",
+        "APP_NAME": "animal",
+        "ANDROID_SDK_VERSION": "4.+"
+      }
     },
     "platforms": [
       "android"
