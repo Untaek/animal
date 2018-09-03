@@ -18,7 +18,7 @@ export class TabPage {
   items: Observable<any[]>
 
   constructor(public navCtrl: NavController, public navParams: NavParams, afDB: AngularFireDatabase) {
-    this.items = afDB.list('/').valueChanges()
+    //this.items = afDB.list('/').valueChanges()
   }
 
   ionViewDidLoad() {

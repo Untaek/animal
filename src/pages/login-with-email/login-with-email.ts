@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AngularFireAuth } from 'angularfire2/auth'
-import * as firebase from 'firebase/app'
+import firebase from 'firebase'
 
 /**
  * Generated class for the LoginWithEmailPage page.
@@ -20,22 +20,35 @@ export class LoginWithEmailPage {
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
-    private afAuth: AngularFireAuth) { }
+    private afAuth: AngularFireAuth) {
+    console.log(navParams.data)
+  }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginWithEmailPage');
+
+    const emailLink = this.navParams.get('emailLink')
+    if (emailLink) {
+      if (this.afAuth.auth.isSignInWithEmailLink(emailLink)) {
+        this.afAuth.auth.signInWithEmailLink('ejdejd2005@naver.com', this.navParams.get('emailLink'))
+          .then(console.log)
+          .catch(console.log)
+      }
+    }
   }
 
-  emailLogin(event) {
-    this.afAuth.auth.sendSignInLinkToEmail(this.email, {
-      handleCodeInApp: true,
-      url: "https://animal-f6c09.firebaseapp.com",
-    })
-      .then(() => {
-        window.localStorage.setItem('email', this.email)
-      })
-      .catch((error) => {
-        console.log(error)
+  async emailLogin(event) {
+    /**
+     * for test
+     */
+    this.email = 'ejdejd2005@naver.com'
+    await this.afAuth.auth.sendSignInLinkToEmail(this.email,
+      {
+        url: 'https://animalauth.page.link/UDPG',
+        handleCodeInApp: true,
+        android: {
+          packageName: 'com.untaek.animal'
+        }
       })
   }
 

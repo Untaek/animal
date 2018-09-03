@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { IonicApp, IonicErrorHandler, IonicModule, NavController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
@@ -14,6 +14,10 @@ import { LoginWithPhonePage } from '../pages/login-with-phone/login-with-phone';
 import { GooglePlus } from '@ionic-native/google-plus'
 import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
 import { Facebook } from '@ionic-native/facebook'
+import { Deeplinks } from '@ionic-native/deeplinks'
+import { TabPage } from '../pages/tab/tab';
+import { Tab2Page } from '../pages/tab2/tab2';
+import { Tab3Page } from '../pages/tab3/tab3';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyAsdcU4x5Few8dI8HFHEZbm_C_c4zRD5qQ',
@@ -30,7 +34,10 @@ const firebaseConfig = {
     HomeTabPage,
     LoginPage,
     LoginWithEmailPage,
-    LoginWithPhonePage
+    LoginWithPhonePage,
+    TabPage,
+    Tab2Page,
+    Tab3Page
   ],
   imports: [
     BrowserModule,
@@ -48,7 +55,10 @@ const firebaseConfig = {
     HomeTabPage,
     LoginPage,
     LoginWithEmailPage,
-    LoginWithPhonePage
+    LoginWithPhonePage,
+    TabPage,
+    Tab2Page,
+    Tab3Page
   ],
   providers: [
     GooglePlus,
@@ -57,6 +67,7 @@ const firebaseConfig = {
     AngularFireDatabase,
     AngularFirestore,
     Facebook,
+    Deeplinks,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ],
 })
