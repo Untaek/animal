@@ -1,6 +1,7 @@
 import { AngularFirestore } from 'angularfire2/firestore'
 import { firestore, auth } from 'firebase';
 import { IUser } from '../interfaces/IUser';
+
 export class AuthManager {
   private afFirestore: AngularFirestore
 

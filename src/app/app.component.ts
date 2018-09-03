@@ -27,7 +27,7 @@ export class MyApp {
         '/': LoginWithEmailPage
       }).subscribe((match) => {
         console.log('Successfully matched route', match)
-        console.log(this.nav.last().id)
+        console.log(this.nav)
         this.nav.push(LoginWithEmailPage, { emailLink: match.$link.url })
         console.log(match.$link.url)
       },

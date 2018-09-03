@@ -14,7 +14,13 @@
 
 
 <ion-content>
-  <ion-list>
-
-  </ion-list>
+  <button ion-button (click)="upload()">upload</button>
+  <div *ngFor='let item of items'>
+    <div>
+      <img src="{{item.photoURL}}" />
+    </div>
+    <div>
+      {{item.description}}
+    </div>
+  </div>
 </ion-content>

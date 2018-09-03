@@ -15,6 +15,9 @@ import { GooglePlus } from '@ionic-native/google-plus'
 import { AngularFirestore, AngularFirestoreModule } from 'angularfire2/firestore';
 import { Facebook } from '@ionic-native/facebook'
 import { Deeplinks } from '@ionic-native/deeplinks'
+import { VideoEditor } from '@ionic-native/video-editor'
+import { Camera } from '@ionic-native/camera'
+import { AndroidPermissions } from '@ionic-native/android-permissions'
 import { TabPage } from '../pages/tab/tab';
 import { Tab2Page } from '../pages/tab2/tab2';
 import { Tab3Page } from '../pages/tab3/tab3';
@@ -68,6 +71,9 @@ const firebaseConfig = {
     AngularFirestore,
     Facebook,
     Deeplinks,
+    VideoEditor,
+    Camera,
+    AndroidPermissions,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ],
 })
