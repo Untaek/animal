@@ -5,6 +5,6 @@ export interface IUser {
   birth?: Date
   photoURL?: string
   phoneNumber?: string
-  creationDate: Date
-  lastLogin: Date
+  creationDate: Date | string
+  lastLogin?: Date | string
 }

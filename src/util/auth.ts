@@ -14,11 +14,17 @@ export class AuthManager {
       email: credential.user.email,
       name: credential.user.displayName,
       uid: credential.user.uid,
-      photoURL: credential.user.photoURL
+      photoURL: credential.user.photoURL,
+      creationDate: credential.user.metadata.creationTime,
+      lastLogin: credential.user.metadata.lastSignInTime
     }
 
     if (credential.additionalUserInfo.isNewUser) {
       afFirestore.collection('user').doc(user.uid).set(user)
     }
+  }
+
+  static connectionStatus() {
+
   }
 }

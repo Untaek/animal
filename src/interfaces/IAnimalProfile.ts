@@ -12,8 +12,8 @@ export interface IAnimalProfile {
     likes: number
     posts: number
     follows: number
-    creationDate: Date
-    lastUpdate: Date
+    creationDate: Date | string
+    lastUpdate: Date | string
     text?: string
     birth?: Date
     city?: string
