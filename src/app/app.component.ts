@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomeTabPage } from '../pages/home-tab/home-tab';
 import { Deeplinks } from '@ionic-native/deeplinks';
 import { LoginWithEmailPage } from '../pages/login-with-email/login-with-email';
+import { UserStatusProvider } from '../providers/user-status/user-status';
 
 @Component({
   templateUrl: 'app.html'
@@ -17,7 +18,8 @@ export class MyApp {
     platform: Platform,
     statusBar: StatusBar,
     splashScreen: SplashScreen,
-    deeplinks: Deeplinks) {
+    deeplinks: Deeplinks,
+    userStatus: UserStatusProvider) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.

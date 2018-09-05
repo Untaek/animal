@@ -15,6 +15,10 @@
 
 <ion-content>
   <button ion-button (click)="upload()">upload</button>
+  <img width="50%" src="https://firebasestorage.googleapis.com/v0/b/animal-f6c09.appspot.com/o/1536094605398_gen.webp?alt=media&token=6b17ecdc-5f89-4ae8-be3f-851df0f37c04"
+  />
+  <div id="progress" *ngIf="progress as p">{{p}}</div>
+  {{progress}}
   <div *ngFor='let item of items'>
     <div>
       <img src="{{item.photoURL}}" />
